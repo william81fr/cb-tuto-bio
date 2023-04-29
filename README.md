@@ -172,12 +172,7 @@ In this case, we're setting the `background-color` CSS property with `rgba` valu
 When choosing colors, perhaps a good idea is to use a tool [like this one](https://mdn.github.io/css-examples/tools/color-picker/).
 
 
-## More examples of HTML tags and CSS rules
-
-You can see more examples of HTML tags to write a plain bio in [my bot's description](https://chaturbate.com/apps/app_details/flexible-tip-menu/).
-
-The HTML code for that is available [on my github](https://raw.githubusercontent.com/william81fr/cb-flexible-tip-menu/main/description.html). If you were to copy-paste this entire file in your bio, you would get the same result.
-
+## Examples of HTML tags and CSS rules
 
 _Limitations:_
 * Unfortunately, unless the code is on a single line, CB will add `br` elements that break the design, so I will always provide both versions.
@@ -185,7 +180,7 @@ _Limitations:_
 * CSS can apply some rudimentary visual filters on any HTML elements, for example shadows and geometric skewing, but it's unlikely to wow you as a model. Any visually appealing filter you may want, like the ones you are used to with social media, CSS won't be able to do. For those, you're better off hiring someone to make an image file that you can include in your bio.
 
 
-## Social media links, pinned in a row at the top, centered and spaced by 10px
+### Social media links, pinned in a row at the top, centered and spaced by 10px
 
 Readable version, remember to change the `a href` and `img src` to your liking:
 ```html
@@ -216,7 +211,7 @@ Copy-pasteable version:
 <ul style="position: absolute; z-index: 99; top: 0px; left: 0px; padding: 0; margin: 0; width: 100%; text-align: center;"><li style="list-style-type: none; display: inline; margin-right: 10px;"><a href="https://www.testbed.cb.dev/william81fr_2/"><img src="https://www.testbed.cb.dev/static/images/socials/snapchat.svg" style="height:40px"></a></li><li style="list-style-type: none; display: inline; margin-right: 10px;"><a href="https://www.testbed.cb.dev/p/william81fr_2/?tab=bio"><img src="https://www.testbed.cb.dev/static/images/socials/snapchat.svg" style="height:40px"></a></li></ul>
 ```
 
-## Social media links, pinned in a column in the top left
+### Social media links, pinned in a column in the top left
 
 Readable version:
 ```html
@@ -282,3 +277,10 @@ Copy-pasteable version:
 ```html
 <ul style="padding: 0; margin: 0; background-image: url(https://www.testbed.cb.dev/static/images/socials/snapchat.svg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; width: 100%"><li style="list-style-type: none; mix-blend-mode: difference; color: white">azerty1</li><li style="list-style-type: none; mix-blend-mode: difference; color: white; text-align: center">azerty2</li><li style="list-style-type: none; mix-blend-mode: difference; color: white">azerty3</li></ul>
 ```
+
+
+## More examples of HTML tags and CSS rules
+
+You can see more examples of HTML tags to write a plain bio in [my bot's description](https://chaturbate.com/apps/app_details/flexible-tip-menu/).
+
+The HTML code for that is available [on my github](https://raw.githubusercontent.com/william81fr/cb-flexible-tip-menu/main/description.html). If you were to copy-paste this entire file in your bio, you would get the same result.
