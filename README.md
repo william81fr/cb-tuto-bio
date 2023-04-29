@@ -177,7 +177,7 @@ When choosing colors, perhaps a good idea is to use a tool [like this one](https
 _Limitations:_
 * Unfortunately, unless the code is on a single line, CB will add `br` elements that break the design, so I will always provide both versions.
 * Be aware that nothing from your bio and wishlist can break out of the Bio tab. CB made sure that anything trying to break out, would be hidden. For example, you can't have the social media links floating next to your streaming window. Some people have tried re-styling the entire page, and sometimes people find clever tricks that can change the orange color or their logo, but it is also very likely to get you in trouble with CB. Recommended to stay within the defined constraints. The only exception is `position: fixed` but that makes the element move with the scroll, and is not always ideal.
-* CSS can apply some rudimentary visual filters on any HTML elements, for example shadows and geometric skewing, but it's unlikely to wow you as a model. Any visually appealing filter you may want, like the ones you are used to with social media, CSS won't be able to do. For those, you're better off hiring someone to make an image file that you can include in your bio.
+* CSS can apply some rudimentary visual filters on any HTML element (for example shadows and geometric skewing) but it's unlikely to really WOW you as a model. Any visually appealing filter you may want, like the ones you are used to with social media, are out of reach here. For those, you're better off hiring someone to make an image file that you can include in your bio.
 
 
 ### Social media links, pinned in a row at the top, centered and spaced by 10px
