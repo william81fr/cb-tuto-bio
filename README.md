@@ -83,7 +83,7 @@ The last part you will have to learn something about is CSS. That's how we apply
 Usually on the web there is another component called JavaScript (or JS for short) but CB doesn't allow that in their bios, for security reasons.
 
 
-## Basics: HTML documents
+## The basics: HTML documents
 
 HTML is a hierarchy of what we call _tags_, also called HTML _elements_. Each tag starts with a `<` symbol and ends with a `>` symbol, for example `<img>` (image) is a tag you are likely to use a lot.
 
@@ -158,7 +158,7 @@ However, CB is filtering both HTML and CSS, probably as a security measure to av
 Some examples of HTML attributes for different situations are in the links at the bottom.
 
 
-## Basics: CSS rules
+## The basics: CSS rules
 
 As we've seen above, CSS can apply colors and other styling choices to elements in our page.
 
