@@ -38,11 +38,11 @@ The profile editor on CB can be found by clicking your nickname in the upper rig
 
 Click inside the box called "About Me", then hit Ctrl+A to make sure the entire box contents are highlighted, then right-click and copy.
 
-Open your code editor of choice, then click the `File > New` menu to open a new tab, and paste there the contents of your current bio. Then select the `File > Save as` menu, choose a file name with today's date and time, change "save as type" to `Hyper Text Markup Language (*.html)` and confirm.
+Open your code editor of choice, then click the `File > New` menu to open a new tab, and paste there the contents of your current bio. Then select the `File > Save as` menu, choose a file name with today's date and time as well as the word "bio", change "save as type" to `Hyper Text Markup Language (*.html)` and confirm.
 
 Same process to backup your current wishlist:
 * in your CB profile editor, find the box called Wish Lists, click inside, select all the contents with Ctrl+A, right click, copy
-* in your code editor, open a new file, paste the contents, write today's date and and time in the file name, save as type HTML, confirm save.
+* in your code editor, open a new file, paste the contents, write today's date and and time in the file name as well as the word "wishlists", save as type HTML, confirm save.
 
 I would suggest repeating this process every day you make a change, so that you can easily restore a previous backup at any time.
 
