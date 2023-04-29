@@ -54,9 +54,9 @@ You can either set a password on your profile (but don't forget to remove the pa
 
 To make it easier, you will need two separate browser windows. Open one with your public profile that everyone can see, and the other is where you write your bio in.
 
-The CB public profile can be found by searching for your nickname in the search on CB.
+The CB public profile can be found by searching for your nickname in the search on CB. This is the only one where changes matter.
 
-The CB profile editor can be found by clicking your nickname in the upper right corner, then "My Profile" in the new drop-down menu, then "Edit your bio" at the top of your bio.
+The CB profile editor can be found by clicking your nickname in the upper right corner, then "My Profile" in the new drop-down menu, then "Edit your bio" at the top of your bio. CB may show the actual changes here but be careful about two things: this is not a preview (changes are always final), and what it looks like here may be slightly different on the public profile. Be sure to refresh the public profile often.
 
 In the box called "About Me", copy-paste the following code:
 ```html
