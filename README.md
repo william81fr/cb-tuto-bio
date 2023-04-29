@@ -277,10 +277,3 @@ Copy-pasteable version:
 ```html
 <ul style="padding: 0; margin: 0; background-image: url(https://www.testbed.cb.dev/static/images/socials/snapchat.svg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; width: 100%"><li style="list-style-type: none; mix-blend-mode: difference; color: white">azerty1</li><li style="list-style-type: none; mix-blend-mode: difference; color: white; text-align: center">azerty2</li><li style="list-style-type: none; mix-blend-mode: difference; color: white">azerty3</li></ul>
 ```
-
-
-## More examples of HTML tags and CSS rules
-
-You can see more examples of HTML tags to write a plain bio in [my bot's description](https://chaturbate.com/apps/app_details/flexible-tip-menu/).
-
-The HTML code for that is available [on my github](https://raw.githubusercontent.com/william81fr/cb-flexible-tip-menu/main/description.html). If you were to copy-paste this entire file in your bio, you would get the same result.
