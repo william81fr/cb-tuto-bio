@@ -122,6 +122,8 @@ Let's got over them:
 * [`br`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br) is a line break in a text paragraph
 * [`span`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span) is a grouping element to apply some CSS on individual words for example
 
+In the list above, all the elements have three parts (`<h1>`, something in the middle, then `</h1>`) except `img` and `br`. It would be incorrect to write `<img>...</img>` or `<br>...</br>`.
+
 Be aware that a few of these are really old and have been deprecated, which means that web browsers can remove them at any point and your bio will look broken. These elements are `b`, `i`, `u` and `font`. There are CSS equivalents for each, so it's no big deal.
 * [`b`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b) was the old way to make text appear with bold styling. Now deprecated. Replace with CSS `<span style="font-weight: bold">...</span>`
 * [`i`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i) was the old way to make some words appear with italic styling. Now deprecated. Replace with CSS `<span style="font-style: italic">...</span>`
@@ -131,7 +133,7 @@ Be aware that a few of these are really old and have been deprecated, which mean
 
 ### How to combine HTML elements
 
-HTML was meant as a hierarchy. There's the global document created by CB, and inside that there are a bunch of layers until we arrive at the layer with our bio.
+HTML was meant as a hierarchy. There's the global document created by CB, inside which are a bunch of layers until we arrive at the layer with our bio.
 
 Inside our bio and wishlist, we probably want things to make sense to the audience.
 
