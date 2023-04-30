@@ -109,16 +109,16 @@ Whishlit box:
 > a p i strong b u ul ol li h1 h2 h3 img font br
 
 Let's got over them:
-* [`a`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) is an anchor, the old name for a link
+* [`a`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) is a link (the technical name being an anchor)
+* [`img`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) for an image
 * [`p`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p) is a paragraph
 * [`strong`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong) is used for strong emphasis on text, by default it is often "bold"
-* [`ul`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) is a grouping element for a list of items, be they ordered or not
-* [`ol`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol) is an element of an ordered (numbered) list
-* [`li`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li) is a bullet list point
+* [`ul`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) is a grouping element for a list of items; `ul` should have only `li` elements directly inside
+* [`ol`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol) is a grouping element for an ordered (numbered) list of items; `ol` should have only `li` elements directly inside
+* [`li`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li) is a bullet list point, they are always placed directly inside either `ul` or `ol`
 * [`h1`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h1) is a level-1 title, by default it is big
 * [`h2`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h2) is a level-2 title, by default it is smaller
 * [`h3`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/h3) is a level-3 title, by default is the smallest (but still bigger than regular text)
-* [`img`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) for an image
 * [`br`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br) is a line break in a text paragraph
 * [`span`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span) is a grouping element to apply some CSS on individual words for example
 
@@ -127,6 +127,70 @@ Be aware that a few of these are really old and have been deprecated, which mean
 * [`i`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i) was the old way to make some words appear with italic styling. Now deprecated. Replace with CSS `<span style="font-style: italic">...</span>`
 * [`u`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u) was the old way to underline some text. Now deprecated. Replace with CSS `<span style="text-decoration: underline">...</span>`
 * [`font`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font) to change the styling of text (size, color etc). Now deprecated. Replace with CSS on a `span` tag.
+
+
+### How to combine HTML elements
+
+HTML was meant as a hierarchy. There's the global document created by CB, and inside that there are a bunch of layers until we arrive at the layer with our bio.
+
+Inside our bio and wishlist, we probably want things to make sense to the audience.
+
+For example to have a link to our social media or whatever, we can make a simple link with text:
+```html
+<a href="...">this is the anchor text</a>
+```
+
+Or perhaps the link would make more sense with an image that people can identify easily:
+```html
+<a href="..."><img src="..."></a>
+```
+
+The same happens with `ul/li` and `ol/li`, which are the only elements that CB allows to structure our content.
+```html
+<ul>
+    <li>something</li>
+    <li>something else</li>
+    <li>yet another thing</li>
+</ul>
+```
+
+```html
+<ul>
+    <li style="list-style-type: none"><h1>title section 1</h1></li>
+    <li style="list-style-type: none">
+        <ul>
+            <li>something 1</li>
+            <li>something else 1</li>
+            <li>yet another thing 1</li>
+        </ul>
+    </li>
+    <li style="list-style-type: none"><h1>title section 2</h1></li>
+    <li style="list-style-type: none">
+        <ul>
+            <li>something 2</li>
+            <li>something else 2</li>
+            <li>yet another thing 2</li>
+        </ul>
+    </li>
+</ul>
+```
+
+The example above has the same effect as this next one, except when you try to apply a background on the entire bio:
+```html
+<h1>title section 1</h1>
+<ul>
+    <li>something 1</li>
+    <li>something else 1</li>
+    <li>yet another thing 1</li>
+</ul>
+
+<h1>title section 2</h1>
+<ul>
+    <li>something 2</li>
+    <li>something else 2</li>
+    <li>yet another thing 2</li>
+</ul>
+```
 
 
 ### How to write HTML attributes
