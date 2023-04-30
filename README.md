@@ -193,9 +193,13 @@ HTML elements can often have "attributes" to inform their context, like the `sty
 <a href="https://chaturbate.com/apps/app_details/flexible-tip-menu/">My "flexible tip menu" bot on CB</a>
 ```
 
-The way to write these attributes is to write their name immediately followed by a `=` symbol and two double quotes `"`. Then you write the attribute's value inbetween these double quotes. Be careful not to leave extra spaces (especially for `<a href` and `<img src`, not so much for `style`), because it would likely break your links. There can be extra spaces around the attribute as a whole (like in `<a href="..." >`) but not elsewhere (for example `<a href = "...">` is wrong).
+The way to write these attributes is to write their name immediately followed by a `=` symbol and two double quotes `"`. Then you write the attribute's value inbetween these double quotes. Be careful not to leave extra spaces inside the double quotes (especially for `<a href` and `<img src`, not so much for `style`), because it would likely break your links.
 
-Some HTML attributes are present in almost all of the HTML elements. The one you are most likely interested in is called [`style`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style), which allows you to apply CSS rules (see further below) separated by a `;`.
+Also, there can be extra spaces around the attribute as a whole: `<a href="..." >`
+
+But: `<a href = "...">` is wrong
+
+Some HTML attributes are present in almost all of the HTML elements. The one you are most likely interested in is called [`style`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style), which allows you to apply CSS rules (see further below) separated by a semicolon `;`.
 
 For example, place the following in your bio, save and reload the public profile window:
 ```html
@@ -224,6 +228,15 @@ background-color: rgba(255, 42, 81, 0.19)
 In this case, we're setting the `background-color` CSS property with `rgba` values, which is short for red, green, blue and alpha. That's what the four numbers represent, they measure how much of each color we want to mix into the background. Each of red, green and blue is a non-decimal number between 0 and 255, while alpha (transparency) is a decimal number between 0 and 1.
 
 When choosing colors, perhaps a good idea is to use a tool [like this one](https://mdn.github.io/css-examples/tools/color-picker/).
+
+The syntax in CSS is a little more forgiving than HTML. For example, there can be spaces in more places like `text-align:center` and `text-align: center` are both valid.
+
+You can omit the semicolon at the end of a `style` attribute. However, if there are several CSS rules in the same `style` attribute, they must be separated by a semicolon. Spaces can be omitted as well.
+```html
+<h1 style="font-size: 2.5em">Big title</h1>
+<h1 style="font-size: 2.5em; font-weight: 999; text-align: center">Big centered thick title</h1>
+<h1 style="font-size:2.5em;font-weight:999;text-align:center">Big centered thick title</h1>
+```
 
 
 ## Examples of HTML tags and CSS rules
