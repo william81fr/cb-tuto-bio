@@ -87,21 +87,23 @@ Usually on the web there is another component called JavaScript (or JS for short
 
 HTML is a hierarchy of what we call _tags_, also called HTML _elements_. Each tag starts with a `<` symbol and ends with a `>` symbol, for example `<img>` (image) is a tag you are likely to use a lot.
 
-Your bio will be inserted into the global HTML docmuent made by CB, the entire bio under one tag.
+Technically, your bio will be inserted into the global HTML document made by CB, the entire bio under one tag.
 
-HTML was made to describe documents, which means, there's a tag to describe a lot of elements of human writing. There is a tag for a paragraph of text, another tag for an image, yet another for a bullet list, _etc._
+HTML was made to describe documents, which means that there is a tag to describe a lot of elements of human writing. There is a tag for a paragraph of text, another tag for an image, yet another for a bullet list, _etc._
 
 If you are curious, the entire list of HTML elements can be found at [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). Just be aware that a lot of the elements described there, are not available for your bio on CB.
 
-CB themselves explain in the very profile page which HTML elements they allow:
-```
-# Bio box:
-a p i strong b u ul ol li h1 h2 h3 img font br span
-# Whishlit box:
-a p i strong b u ul ol li h1 h2 h3 img font br
-```
+### The HTML elements allowed by CB
 
-Let's got over these, shall we?
+CB themselves explain in the very profile page which HTML elements they allow.
+
+Bio box:
+> a p i strong b u ul ol li h1 h2 h3 img font br span
+
+Whishlit box:
+> a p i strong b u ul ol li h1 h2 h3 img font br
+
+Let's got over them:
 * [`a`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) is an anchor, the old name for a link
 * [`p`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p) is a paragraph
 * [`strong`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong) is used for strong emphasis on text, by default it is often "bold"
@@ -121,13 +123,18 @@ Be aware that a few of these are really old and have been deprecated, which mean
 * [`u`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u) was the old way to underline some text. Now deprecated. Replace with CSS `<span style="text-decoration: underline">...</span>`
 * [`font`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font) to change the styling of text (size, color etc). Now deprecated. Replace with CSS on a `span` tag.
 
-HTML elements can often have "attributes" to inform their context, like the `style` we've been seeing here. The list of these attributes is given at the dedicated page in the element's documentation. For example if you want to make a link to another page (say your social profiles), you will use the `<a>` anchor element whose most obvious attribute is `href` (to describe where the link points to).
+
+### How to write HTML attributes
+
+HTML elements can often have "attributes" to inform their context, like the `style` we've been seeing here. The list of these attributes is given at the dedicated page in the element's documentation. For example if you want to make a link to another page (say your social profiles), you will use the [`<a>` anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) whose most obvious attribute is `href` (to describe where the link points to).
 
 ```html
 <a href="https://chaturbate.com/apps/app_details/flexible-tip-menu/">My "flexible tip menu" bot on CB</a>
 ```
 
-Some HTML attributes are present in almost all of the HTML elements. The one you are most likely interested in is called `style`, which allows you to apply CSS rules (see further below).
+The way to write these attributes is to write their name immediately followed by a `=` symbol and two double quotes `"`. Then you write the attribute's value inbetween these double quotes. Be careful not to leave extra spaces (especially for `<a href` and `<img src`, not so much for `style`), because it would likely break your links. There can be extra spaces around the attribute as a whole (like in `<a href="..." >`) but not elsewhere (for example `<a href = "...">` is wrong).
+
+Some HTML attributes are present in almost all of the HTML elements. The one you are most likely interested in is called [`style`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style), which allows you to apply CSS rules (see further below) separated by a `;`.
 
 For example, place the following in your bio, save and reload the public profile window:
 ```html
@@ -136,26 +143,12 @@ For example, place the following in your bio, save and reload the public profile
 
 Okay that particular color may not necessarily be pretty, this is just an example.
 
-The point is, once you figure out what you aim to do, you can look up the ways that elements & attributes should be combined for this goal. For example if you want to display your tip menu, you'll probably want to use a plain paragraph (`<p>`) or perhaps a bullet list (one `<ul>` element with a bunch of `<li>` inside).
-
-Normally, if you want to group elements together so that you can apply styling to them as a whole, you can place them in a `<div>` element like this:
-```html
-<div style="background-color: rgba(42, 255, 81, 0.19)">
-    <h1>My bio part1</h1>
-    <p>a</p>
-    <p>b</p>
-</div>
-<div style="background-color: rgba(255, 42, 81, 0.19)">
-    <h1>My bio part2</h1>
-    <p>c</p>
-    <p>d</p>
-</div>
-```
-
-However, CB is filtering both HTML and CSS, probably as a security measure to avoid accounts hijacking their users. There is no `div` element available on CB but no matter, we can use `p` to the same effect. We're not really supposed to put paragraphs inside other paragraphs, but it works...
-
-
-Some examples of HTML attributes for different situations are in the links at the bottom.
+Explanation of this `style` value:
+* `background-color` defines how to paint the background color, here with a very specific color code (deep red with some green and a little more blue)
+* `font-size` changes the font size to 2.5 times what it should be
+* `font-weight` how thick the letters are
+* `text-align` to center the text horizontally on the line
+* `line-height` to make sure the background covers the entirety of the letters (vertically)
 
 
 ## The basics: CSS rules
@@ -178,6 +171,27 @@ _Limitations:_
 * Unfortunately, unless the code is on a single line, CB will add `br` elements that break the design, so I will always provide both versions.
 * Be aware that nothing from your bio and wishlist can break out of the Bio tab. CB made sure that anything trying to break out, would be hidden. For example, you can't have the social media links floating next to your streaming window. Some people have tried re-styling the entire page, and sometimes people find clever tricks that can change the orange color or their logo, but it is also very likely to get you in trouble with CB. Recommended to stay within the defined constraints. The only exception is `position: fixed` but that makes the element move with the scroll, and is not always ideal.
 * CSS can apply some rudimentary visual filters on any HTML element (for example shadows and geometric skewing) but it's unlikely to really WOW you as a model. Any visually appealing filter you may want, like the ones you are used to with social media, are out of reach here. For those, you're better off hiring someone to make an image file that you can include in your bio.
+
+
+### How to make it work on CB specifically
+
+The point is, once you figure out what you aim to do, you can look up the ways that elements & attributes should be combined for this goal. For example if you want to display your tip menu, you'll probably want to use a plain paragraph (`<p>`) or perhaps a bullet list (one `<ul>` element with a bunch of `<li>` inside).
+
+Normally, if you want to group elements together so that you can apply styling to them as a whole, you can place them in a `<div>` element like this:
+```html
+<div style="background-color: rgba(42, 255, 81, 0.19)">
+    <h1>My bio part1</h1>
+    <p>a</p>
+    <p>b</p>
+</div>
+<div style="background-color: rgba(255, 42, 81, 0.19)">
+    <h1>My bio part2</h1>
+    <p>c</p>
+    <p>d</p>
+</div>
+```
+
+However, CB is filtering both HTML and CSS, probably as a security measure to avoid accounts hijacking their users. There is no `div` element available on CB but no matter, we can use `p` to the same effect. We're not really supposed to put paragraphs inside other paragraphs, but it works...
 
 
 ### Social media links, pinned in a row at the top, centered and spaced by 10px
