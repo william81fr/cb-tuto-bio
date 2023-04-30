@@ -56,12 +56,14 @@ To make it easier, you will need two separate browser windows. Open one with you
 
 The CB public profile can be found by searching for your nickname in the search on CB. This is the only one where changes matter.
 
-The CB profile editor can be found by clicking your nickname in the upper right corner, then "My Profile" in the new drop-down menu, then "Edit your bio" at the top of your bio. CB may show the actual changes here but be careful about two things: this is not a preview (changes are always final), and what it looks like here may be slightly different on the public profile. Be sure to refresh the public profile often.
+The CB profile editor can be found by clicking your nickname in the upper right corner, then "My Profile" in the new drop-down menu, then "Edit your bio" at the top of your bio.
 
 In the box called "About Me", copy-paste the following code:
 ```html
 <h1>about me test1</h1>
 ```
+
+This is a simple HTML tag for a level-1 title.
 
 Likewise, in the box called "Wish Lists", copy-paste the following code:
 ```html
@@ -70,7 +72,10 @@ Likewise, in the box called "Wish Lists", copy-paste the following code:
 
 Then click the button that says "Update Bio", go back to your public profile and hit refresh. You will now see "about me test1" and "wish lists test1" written in big black letters.
 
-This is a simple HTML tag for a level-1 title.
+NB: CB may show the changes directly in the profile editor window but be careful about two things:
+* this is not a preview (changes are always final);
+* what it looks like here may be slightly different on the public profile;
+* => Be sure to refresh the public profile often.
 
 ## How to make a pretty bio
 
