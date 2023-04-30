@@ -191,8 +191,49 @@ Normally, if you want to group elements together so that you can apply styling t
 </div>
 ```
 
-However, CB is filtering both HTML and CSS, probably as a security measure to avoid accounts hijacking their users. There is no `div` element available on CB but no matter, we can use `p` to the same effect. We're not really supposed to put paragraphs inside other paragraphs, but it works...
+However, CB is filtering both HTML and CSS, probably as a security measure to avoid accounts hijacking their users. There is no `div` element available on CB but no matter, we can use `ul` & `li` to the same effect. It's a little more complicated to write, but it works...
 
+Readable version:
+```html
+<ul style="padding: 0; margin: 0; width: 100%">
+    <li style="list-style-type: none;">top (outer)</li>
+    <li style="list-style-type: none">
+        <ul style="padding: 0; margin: 0">
+            <li style="list-style-type: none">top (inner)</li>
+            <li style="list-style-type: none; text-align: center">middle (inner)</li>
+            <li style="list-style-type: none">bottom (inner)</li>
+        </ul>
+    </li>
+    <li style="list-style-type: none">bottom (outer)</li>
+</ul>
+```
+
+Copy-pasteable version:
+```html
+<ul style="padding: 0; margin: 0; width: 100%"><li style="list-style-type: none">top (outer)</li><li style="list-style-type: none"><ul style="padding: 0; margin: 0"><li style="list-style-type: none">top (inner)</li><li style="list-style-type: none; text-align: center">middle (inner)</li><li style="list-style-type: none">bottom (inner)</li></ul></li><li style="list-style-type: none">bottom (outer)</li></ul>
+```
+
+Or the same thing with a gradient background:
+
+Readable version:
+```html
+<ul style="background: linear-gradient(blue, 10%, pink); padding: 0; margin: 0; width: 100%">
+    <li style="list-style-type: none; mix-blend-mode: difference; color: grey; padding-top: 10px; padding-bottom: 5px">top (outer)</li>
+    <li style="list-style-type: none; mix-blend-mode: difference; color: grey; padding-top: 5px; padding-bottom: 5px">
+        <ul style="padding: 0; margin: 0; mix-blend-mode: difference; color: grey">
+            <li style="list-style-type: none">top (inner)</li>
+            <li style="list-style-type: none; text-align: center">middle (inner)</li>
+            <li style="list-style-type: none">bottom (inner)</li>
+        </ul>
+    </li>
+    <li style="list-style-type: none; mix-blend-mode: difference; color: grey; padding-top: 5px; padding-bottom: 10px">bottom (outer)</li>
+</ul>
+```
+
+Copy-pasteable version:
+```html
+<ul style="background: linear-gradient(blue, 10%, pink); padding: 0; margin: 0; width: 100%"><li style="list-style-type: none; mix-blend-mode: difference; color: grey; padding-top: 10px; padding-bottom: 5px">top (outer)</li><li style="list-style-type: none; mix-blend-mode: difference; color: grey; padding-top: 5px; padding-bottom: 5px"><ul style="padding: 0; margin: 0; mix-blend-mode: difference; color: grey"><li style="list-style-type: none">top (inner)</li><li style="list-style-type: none; text-align: center">middle (inner)</li><li style="list-style-type: none">bottom (inner)</li></ul></li><li style="list-style-type: none; mix-blend-mode: difference; color: grey; padding-top: 5px; padding-bottom: 10px">bottom (outer)</li></ul>
+```
 
 ### Social media links, pinned in a row at the top, centered and spaced by 10px
 
