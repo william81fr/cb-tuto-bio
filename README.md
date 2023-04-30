@@ -147,13 +147,22 @@ Or perhaps the link would make more sense with an image that people can identify
 
 The same happens with `ul/li` and `ol/li`, which are the only elements that CB allows to structure our content.
 ```html
+<h1>title section 1</h1>
 <ul>
-    <li>something</li>
-    <li>something else</li>
-    <li>yet another thing</li>
+    <li>something 1</li>
+    <li>something else 1</li>
+    <li>yet another thing 1</li>
+</ul>
+
+<h1>title section 2</h1>
+<ul>
+    <li>something 2</li>
+    <li>something else 2</li>
+    <li>yet another thing 2</li>
 </ul>
 ```
 
+The example above has the same effect as this next one, except when you try to apply a background on the entire bio (not possible with the example above because there isn't one root element):
 ```html
 <ul>
     <li style="list-style-type: none"><h1>title section 1</h1></li>
@@ -172,23 +181,6 @@ The same happens with `ul/li` and `ol/li`, which are the only elements that CB a
             <li>yet another thing 2</li>
         </ul>
     </li>
-</ul>
-```
-
-The example above has the same effect as this next one, except when you try to apply a background on the entire bio:
-```html
-<h1>title section 1</h1>
-<ul>
-    <li>something 1</li>
-    <li>something else 1</li>
-    <li>yet another thing 1</li>
-</ul>
-
-<h1>title section 2</h1>
-<ul>
-    <li>something 2</li>
-    <li>something else 2</li>
-    <li>yet another thing 2</li>
 </ul>
 ```
 
