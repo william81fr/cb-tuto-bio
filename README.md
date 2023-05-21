@@ -29,6 +29,16 @@ Two settings that I tend to change when I install vscode are:
 * Trim Final Newlines: disabled
 * Trim Trailing Whitespace: enable
 
+## Developer tools (in the browser)
+
+Pretty much every modern web browser has a variation of "developer tools", and they all mostly have the same functionality. They let you inspect the page, try stuff out in the context of the page, check where stuff is hosted, see how chatty the network is, etc. The part that is of most interest here is the tab called "inspector", "elements" or something similar, usually the first tab when you open the Developer Tools.
+
+How to open these tools, your choice:
+* with the F12 key (works on Chrome & Firefox at least);
+* with the Ctrl+Shift+i key combo (works on Chrome & Firefox at least);
+* through the menus (upper right corner > more tools > web developer tools);
+* or simply right-click anywhere in the page and choose Inspect.
+
 
 # First steps
 
@@ -408,3 +418,62 @@ Copy-pasteable version:
 ```html
 <ul style="padding: 0; margin: 0; background-image: url(https://www.testbed.cb.dev/static/images/socials/snapchat.svg); background-repeat: no-repeat; background-size: cover; background-attachment: fixed; width: 100%"><li style="list-style-type: none; mix-blend-mode: difference; color: white">azerty1</li><li style="list-style-type: none; mix-blend-mode: difference; color: white; text-align: center">azerty2</li><li style="list-style-type: none; mix-blend-mode: difference; color: white">azerty3</li></ul>
 ```
+
+
+# Examples with the Developer Tools
+
+Open the Developer Tools with your preferred method (see at the top of this document) or simply by right-clicking anywhere in the page and choosing "Inspect".
+
+Make sure you are on the "inspector/elements" tab and it will show you the entire HTML structure of the page you are viewing. It will also let you inspect which CSS rules apply to each element.
+
+## Getting your bearings in the Inspector tab
+
+When you move the mouse over the inspector, different sections of the page become highlighted. If you click on an element that doesn't highlight the entire page, let's say the right-side column for example, and then hit the Del key on your keyboard, that element disappears entirely. Of course, you can just refresh the page to start over.
+
+Another way to target a specific element (besides finding it in the code) is to click on the arrow symbol located in the upper left corner of the Developer Tools, then moving the mouse over the page. As soon as you find your target, click and the inspector will focus on that element.
+
+## Organizing the workspace
+
+The inspector tends to cram a lot of information in a tiny space and it not always easy to read.
+
+I tend to always close the "what's new" and "console" tabs that appear at the bottom. The console has its own tab, so I don't need it here as well. Plus, we won't use it at all while working on CB.
+
+### Docking the developer tools window
+
+Perhaps you'll want to dock the inspector differently from the browsing window. To do that, click on the three dots in the upper right corner and change your docking preference.
+
+### A ruler to help with pixel positioning
+
+Another improvement you can make is enable the rulers when you select an element, so that you know how many pixels are vertically and horizontally:
+* Firefox: three dots in the upper right corner, Settings, check "Toggle rulers for the page", got back to the Inspector, now there is a new ruler icon in the upper right corner
+* Chrome: cogwheel icon in the upper right corner, check "Elements > Show rulers on hover", close with the tiny x in the upper right corner
+
+## Reading the CSS on an element
+
+Ok so it's time to try something.
+
+### Experiment
+
+Find an element in your bio and highlight it in the Developer Tools. Now on the left side you have the HTML that you wrote in your bio, and on the right there is a section with the CSS styles that are applied to this element.
+
+To use a specific example, try to focus on a video from your CB library. If you right-click on the thumbnail, you'll probably end up with the developer tools focusing on that specific `<img` HTML element. In the inspector tab, you can see that this `<img` element is placed inside an `<a` (link) element. Now focus on that `<a` element. If you scroll down the code, you'll see that each of the videos is there, one after the next.
+
+Now look at the Styles section on the right. At the top there is usually the "element.style" block, which is the only one that CB gives us control over. In this case there is a property called "display: inline-block". Try to uncheck that one now. You'll see that this video is now on its own line, while all the others are all bunched together on a second line.
+
+Another example specifically with the bio, if you use the "A background image that stays fixed regardless of the scroll" example from above, you can inspect the "azerty2" text and then toggling CSS properties to see what happens.
+
+### Some context
+
+CSS was made to help the web developer with organizing their styles. If you apply a style on an element, all the elements inside it also inherit its behaviour.
+
+That's what `element.style` means: it lets you override behaviour that was defined by CB, because your bio is included in their page. Your styles can't escape from your bio, but you can change whatever defaults they chose (colors etc.).
+
+## Viewing your bio as if with desktop, tablet or mobile
+
+The Developer Tools can show you any page as it would appear in different situations. For example if your users tend to watch on their mobile, maybe you want to make sure that your Bio looks ok in that context.
+
+The way to enable this is with an icon that looks like a phone and a tablet placed on top of one another
+* Firefox: located in the upper right corner, next to the three dots;
+* Chrome: located in the upper left corner, next to the focus icon.
+
+Click on the icon to enable the simulation, and click on it again to end the simulation. While in the simulation, you can change the screen size (Chrome has better options in this regard) and its orientation.
