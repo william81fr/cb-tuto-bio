@@ -477,3 +477,11 @@ The way to enable this is with an icon that looks like a phone and a tablet plac
 * Chrome: located in the upper left corner, next to the focus icon.
 
 Click on the icon to enable the simulation, and click on it again to end the simulation. While in the simulation, you can change the screen size (Chrome has better options in this regard) and its orientation.
+
+## Taking inspiration from other bios
+
+The Web Developer Tools are what allow you to inspect another model's bio that you find interesting and see how they organized it.
+
+There is usually no copyright on bios, but as always, be mindful. Don't go and simply copy/paste a bio from womeone who might have paid extra to have it custom made.
+
+Taking inspiration is fine, especially if you add your own spin to it.
