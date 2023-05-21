@@ -456,11 +456,11 @@ Ok so it's time to try something.
 
 Find an element in your bio and highlight it in the Developer Tools. Now on the left side you have the HTML that you wrote in your bio, and on the right there is a section with the CSS styles that are applied to this element.
 
-To use a specific example, try to focus on a video from your CB library. If you right-click on the thumbnail, you'll probably end up with the developer tools focusing on that specific `<img` HTML element. In the inspector tab, you can see that this `<img` element is placed inside an `<a` (link) element. Now focus on that `<a` element. If you scroll down the code, you'll see that each of the videos is there, one after the next.
+To use a specific example, try to focus on a video from your CB library. If you right-click on the thumbnail, you'll probably end up with the developer tools focusing on that specific `<img` HTML element. In the inspector tab, you can see that this `<img` element is placed inside an `<a` (link) element. Now focus on that `<a` element. If you scroll down the code, you'll see that all the videos are there, one after the next.
 
-Now look at the Styles section on the right. At the top there is usually the "element.style" block, which is the only one that CB gives us control over. In this case there is a property called "display: inline-block". Try to uncheck that one now. You'll see that this video is now on its own line, while all the others are all bunched together on a second line.
+Now look at the Styles section on the right. At the top there is usually the `element.style` block, which is the only one that CB gives us control over. In this case there is a property called `display: inline-block`. Try to uncheck that one now. You'll see that this video is now on its own line, while all the others are all bunched together on a second line.
 
-Another example specifically with the bio, if you use the "A background image that stays fixed regardless of the scroll" example from above, you can inspect the "azerty2" text and then toggling CSS properties to see what happens.
+Another example specifically with the bio, if you use the "A background image that stays fixed regardless of the scroll" example from above, you can inspect the `azerty2` text and then toggling CSS properties to see what happens.
 
 ### Some context
 
